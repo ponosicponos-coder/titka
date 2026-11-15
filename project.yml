@@ -1,0 +1,33 @@
+name: Titka
+options:
+  bundleIdPrefix: com.titka
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  Titka:
+    type: application
+    platform: iOS
+    sources:
+      - Titka
+    info:
+      path: Titka/Info.plist
+      properties:
+        CFBundleDisplayName: Тітка
+        UILaunchScreen: {}
+        UIBackgroundModes:
+          - location
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSLocationWhenInUseUsageDescription: Показує, де ти відносно дому тітки.
+        NSLocationAlwaysAndWhenInUseUsageDescription: Щоб тривога спрацьовувала, коли ти поруч із домом тітки, навіть коли програма закрита.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.titka.auntalarm
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: NO
